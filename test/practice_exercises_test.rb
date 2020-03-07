@@ -20,7 +20,6 @@ describe "Practice Exercises" do
     it "will return true for long phrases with spaces and punctuation" do
       # Arrange
       palindrome_word = "A man, a plan, a canal: Panama"
-
       # Act-Assert
       expect(is_palindrome(palindrome_word)).must_equal true
     end
