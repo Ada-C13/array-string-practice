@@ -2,7 +2,7 @@
 # 
 # Title  : Array Strings - Ada Cohort 13 - Space
 # Author : Suely Barreto
-# Date   : February 2020
+# Date   : March 2020
 
 # Given a string, determine if it is a palindrome considering only alphanumeric characters and ignoring cases
 # Note: For the purpose of this problem, we define empty string as valid palindrome.
