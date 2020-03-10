@@ -10,7 +10,7 @@
 # Time complexity : O(n)
 # Space complexity: O(1)
 def is_palindrome(string)
-  string = string.downcase.gsub(/[^a-z]/i, '')
+  string = string.downcase.gsub(/[^a-z]/, '')
 
   i = 0
   j = string.length - 1
