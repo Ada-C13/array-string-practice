@@ -1,6 +1,6 @@
 
-# Time Complexity: ?
-# Space Complexity: ?
+# Time Complexity: o(n)
+# Space Complexity: o(n)
 def is_palindrome(string)
   string_array = string.split("") 
   alpha_only = []
@@ -21,8 +21,8 @@ def is_palindrome(string)
   return alpha_only.join() == alpha_copy.join()
 end
 
-# Time Complexity: ?
-# Space Complexity: ?
+# Time Complexity: o(n^2)
+# Space Complexity: o(1)
 def longest_prefix(strings)
   index = 0 
   prefix = ""
