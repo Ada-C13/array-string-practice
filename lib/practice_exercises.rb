@@ -34,23 +34,32 @@ end
   # n is length of strings
   # m is smallest length
 # Space Complexity: O(1)
-#examples: re-, sub-, post-, auto-, semi-
-#looking for longest prefix 
-#input "strings"
-#return longest prefix
+
+#Get longest prefix 
+#input ["strings"]
+#return strings that are in common 
 def longest_prefix(strings)
-  longest_prefix = strings[0]
-  strings.each do |string|
-    letters = 0
-    longest_prefix.length.times do
-      if longest_prefix[letters] == string[letters]
-        letters += 1
-      else 
-        longest_prefix = longest_prefix.slice(0, letters) #slice returns based on array index: https://www.geeksforgeeks.org/ruby-array-slice-function/
-        break
-      end #if/else
-    end #second do
-  end #first d0
-end #def
+  strings_in_common = ""
+  #checking if array is emptyh
+  if strings.length == 0
+    return strings_in_common
+  end
+
+  shortest_string = strings.min
+  shortest_string_length = shortest_string.length
+  i = 0
+  while i < shortest_string_length
+    letters = shortest_string_length[i]
+    strings.each do |string|
+      if letters != string[i]
+        return strings_in_common
+      end
+    end
+    strings_in_common += letter
+    i += 1
+  end
+  return strings_in_common
+end 
+
 
 
