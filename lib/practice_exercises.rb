@@ -9,24 +9,26 @@
 
 def is_palindrome(aString)
   return false if aString == nil
-  a_test = 0
-  b_test = aString.length - 1
+  #positive side = a = 0
+  #negative side = y = -1
+  temp_word = aString.gsub(/(\W|\d)/, "").downcase
 
-  while a_test < b_test
-    if aString[a_test] == " "
-      a_test += 1
-    elsif aString[b_test] == " "
-      b_test -= 1
-    elsif aString[a_test] == aString[b_test]
-      j += 1
-      k -= 1
-    elsif (aString[b_test] != " ") && 
-          (aString[b_test] != " ") && 
-          (aString[a_test] != aString[b_test])
+  i = 0
+  a = -1
+  word = temp_word.chars
+  while i < (word.length / 2)
+  # check chars are the same
+  # if same, move to next set of chars
+  # if different, return false 
+  # when processed all chars and still haven't found a difference, return true
+    if word[i] == word[a]
+      a -= 1
+      i += 1
+    else
       return false
     end
   end
-  true
+  return true
 end
 
 
@@ -45,13 +47,13 @@ def longest_prefix(strings)
     return strings_in_common
   end
 
-  shortest_string = strings.min
-  shortest_string_length = shortest_string.length
+  shortest_string = strings.min(){|a, b| a.length <=> b.length}.chars
+
   i = 0
-  while i < shortest_string_length
-    letters = shortest_string_length[i]
+  while i < shortest_string.length
+    letter = shortest_string[i]
     strings.each do |string|
-      if letters != string[i]
+      if letter != string.chars[i]
         return strings_in_common
       end
     end
@@ -60,6 +62,4 @@ def longest_prefix(strings)
   end
   return strings_in_common
 end 
-
-
 
