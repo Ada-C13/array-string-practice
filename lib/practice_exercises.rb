@@ -18,8 +18,8 @@ def is_palindrome(string)
   return true
 end
 
-# Time Complexity: ?
-# Space Complexity: ?
+# Time Complexity: O(n^2) Because of the nested loops. 
+# Space Complexity: O(1)
 
 def shortest_word(strings)
   shortest = strings[0]
@@ -38,7 +38,7 @@ def longest_prefix(strings)
 
   longest_prefix = ""
   
-  if strings.empty?
+  if strings.length < 1
     longest_prefix = first_word
     return longest_prefix
   end
