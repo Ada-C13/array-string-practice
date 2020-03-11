@@ -60,7 +60,6 @@ describe "Practice Exercises" do
     it "will work for the README strings" do
       # Arrange
       strings = ["dog","racecar","car"]
-
       # Act
       output = longest_prefix(strings)
 
