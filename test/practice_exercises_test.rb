@@ -35,6 +35,17 @@ describe "Practice Exercises" do
   end
 
   describe "Longest valid substring" do
+    it "will work for a single word string" do
+      # Arrange
+      strings = ["flower"]
+
+      # Act
+      output = longest_prefix(strings)
+
+      # Assert
+      expect(output).must_equal "flower"
+    end
+
     it "will work for the README strings" do
       # Arrange
       strings = ["flower","flow","flight"]
