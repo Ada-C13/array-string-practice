@@ -20,9 +20,11 @@ describe "Practice Exercises" do
     it "will return true for long phrases with spaces and punctuation" do
       # Arrange
       palindrome_word = "A man, a plan, a canal: Panama"
-
+      
+      puts palindrome_word.gsub(/[^a-zA-Z]/, "").downcase
       # Act-Assert
       expect(is_palindrome(palindrome_word)).must_equal true
+      
     end
 
     it "will return false for non-palindrome long phrases with spaces and punctuation" do
@@ -41,7 +43,7 @@ describe "Practice Exercises" do
 
       # Act
       output = longest_prefix(strings)
-
+      p output
       # Assert
       expect(output).must_equal "fl"
     end
