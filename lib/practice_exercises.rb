@@ -29,12 +29,12 @@ def longest_prefix(strings)
   longest_prefix_num = 0
   first_string = strings[0]
 
-  i = (first_string.length - 1)
+  i = 0
   
   strings.each do |string|
-    until string.include?(first_string[0..i]) do
-      i -= 1
-      if i == 0
+    if string.include?(first_string[0..i])
+      i += 1
+      if i == first_string.length
         return ""
       end
     end
