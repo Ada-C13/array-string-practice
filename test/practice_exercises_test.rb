@@ -84,7 +84,7 @@ describe "Practice Exercises" do
       # Arrange
       strings = ["carborator","carvonulted","carsome", "calsome"]
 
-      # Act
+      # Act 
       output = longest_prefix(strings)
 
       # Assert
