@@ -15,11 +15,11 @@ def is_palindrome(string)
   return true 
 end
 
-# Time Complexity: ?
-# Space Complexity: ?
+# Time Complexity: O(n^2), there is an each loop (dependent on the length of the shortest string) nested within a times loop (dependent on the length of the strings array).
+# Space Complexity: O(1), the number of varibles tracked does not change regardless of input size.
 def longest_prefix(strings)
   prefix = ""
-  shortest_string = strings.min_by { |string| string.length }
+  shortest_string = strings.min_by(&:length)
 
   shortest_string.length.times do |index|
     letter = strings[0][index]
