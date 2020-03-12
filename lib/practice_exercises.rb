@@ -18,6 +18,8 @@ end
 # Time Complexity: ?
 # Space Complexity: ?
 def longest_prefix(strings)
-  raise NotImplementedError, "Not implemented yet"
+  prefix = ""
+
+  return prefix
 end
 
