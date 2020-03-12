@@ -19,6 +19,16 @@ end
 # Space Complexity: ?
 def longest_prefix(strings)
   prefix = ""
+  shortest_string = strings.min_by { |string| string.length }
+
+  shortest_string.length.times do |index|
+    letter = strings[0][index]
+    strings.each do |string|
+      return prefix if string[index] != letter
+    end
+
+    prefix += letter
+  end
 
   return prefix
 end
