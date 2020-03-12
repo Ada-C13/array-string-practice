@@ -34,7 +34,7 @@ describe "Practice Exercises" do
     end
   end
 
-  describe "Longest valid substring" do
+  xdescribe "Longest valid substring" do
     it "will work for the README strings" do
       # Arrange
       strings = ["flower","flow","flight"]
