@@ -26,22 +26,25 @@ end
 # Time Complexity: ?
 # Space Complexity: ?
 def longest_prefix(strings)
-  longest_prefix_num = 0
   first_string = strings[0]
 
-  i = 0
+  string_length = first_string.length
+  x = string_length
   
   strings.each do |string|
-    if string.include?(first_string[0..i])
-      i += 1
-      if i == first_string.length
-        return ""
+    string_length.times do
+      if !string.include?(first_string[0..x])
+        x -= 1
       end
     end
 
-    return first_string[0..i]
+
+
   end
 
+  
+
+  return first_string[0..x]
 
 end
 
