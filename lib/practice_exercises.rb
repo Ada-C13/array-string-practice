@@ -6,9 +6,9 @@ def is_palindrome(string)
   first_index = 0
   last_index = string.length - 1
 
-	while first_index < last_index
+  while first_index < last_index
     return false if string[first_index].downcase != string[last_index].downcase
-		first_index += 1
+    first_index += 1
     last_index -= 1
   end
   
