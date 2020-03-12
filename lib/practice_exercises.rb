@@ -36,10 +36,25 @@ def is_palindrome(string)
   true
 end 
 
-# Time Complexity: ?
-# Space Complexity: ?
+# Time Complexity: O(n)
+# Space Complexity: O(n) (Not sure on this; I have yet to find an explanation on Big O that resonates well.)
 def longest_prefix(strings)
 
-  
-  raise NotImplementedError, "Not implemented yet"
+ # Assign relevant variables
+ winning_ticket = ""
+ i = 0 
+ fastest_furthest = strings[0][i]
+
+ # Account for non-nil values and return method result 
+  while fastest_furthest != nil
+    strings.each do |string|
+      unless string[i] == fastest_furthest
+        return winning_ticket
+      end 
+    end 
+    winning_ticket += fastest_furthest
+    i += 1
+    fastest_furthest = strings[0][i]
+  end
+  return winning_ticket
 end

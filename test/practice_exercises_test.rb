@@ -1,6 +1,6 @@
 require_relative "test_helper"
 
-describe "Practice Exercises" do
+xdescribe "Practice Exercises" do
   describe "valid palindrome" do
     it "works for 1-word palindromes" do
       expect(is_palindrome("a")).must_equal true
@@ -34,7 +34,7 @@ describe "Practice Exercises" do
     end
   end
 
-  xdescribe "Longest valid substring" do
+  describe "Longest valid substring" do
     it "will work for the README strings" do
       # Arrange
       strings = ["flower","flow","flight"]
