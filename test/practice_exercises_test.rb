@@ -1,6 +1,6 @@
 require_relative "test_helper"
 
-describe "Practice Exercises" do
+xdescribe "Practice Exercises" do
   describe "valid palindrome" do
     it "works for 1-word palindromes" do
       expect(is_palindrome("a")).must_equal true
