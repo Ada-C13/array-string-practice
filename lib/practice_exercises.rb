@@ -1,6 +1,6 @@
 
 # Time Complexity: O(n)
-# Space Complexity: 
+# Space Complexity: O(n)
 def is_palindrome(string)
   array = []
   string = string.upcase
@@ -11,7 +11,6 @@ def is_palindrome(string)
   if array.length != back_half.length
     array.pop
   end
-
   if string.length == 1 || string == ""
     return true
   elsif array == back_half
@@ -23,15 +22,14 @@ def is_palindrome(string)
   raise NotImplementedError, "Not implemented yet"
 end
 
-# Time Complexity: ?
-# Space Complexity: ?
+# Time Complexity: O(n^2)
+# Space Complexity: O(n)
 def longest_prefix(strings)
-  letters = [] 
-  # strings.map { |word| letters << word.chars() }
-
   prefix = ""
-  
-  for i in 0..5
+  short_word = strings.min{|a,b| a.size <=> b.size}
+  short_word = short_word.length - 1
+
+  for i in 0..short_word
     char = strings[0][i]
     strings.each do |word|
       if char != word[i]
@@ -39,12 +37,9 @@ def longest_prefix(strings)
       end
     end
     prefix += char
-    
   end
-
-
 
   return prefix
 
-  # raise NotImplementedError, "Not implemented yet"
+  raise NotImplementedError, "Not implemented yet"
 end
