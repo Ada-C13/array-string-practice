@@ -3,7 +3,7 @@
 # Space Complexity: O(n) ?
 def is_palindrome(string)
   split_string_array = string.downcase.split("")
-  words_array = split_string_array.select{|letter| letter[/[a-zA-z]/]}
+  words_array = split_string_array.select{|letter| letter[/[a-z]/]}
 
   reverse_words_array = []
   x = 0
@@ -17,10 +17,19 @@ def is_palindrome(string)
 
 end
 
-# Time Complexity: ?
-# Space Complexity: ?
+# Time Complexity: O(n)?
+# Space Complexity: 0(n)?
 def longest_prefix(strings)
-  array_length = strtings.length
+  return "" if strings.empty? == true
   
+  longest_prefix = strings[0].chars
+  strings.each do |string|
+   holder = string.chars
+   longest_prefix = holder & longest_prefix
+  end
+
+  return longest_prefix.join
+  
+
 end
 
