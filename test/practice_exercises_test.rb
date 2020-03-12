@@ -1,5 +1,6 @@
 require_relative "test_helper"
 
+
 describe "Practice Exercises" do
   describe "valid palindrome" do
     it "works for 1-word palindromes" do
@@ -83,7 +84,7 @@ describe "Practice Exercises" do
       # Arrange
       strings = ["carborator","carvonulted","carsome", "calsome"]
 
-      # Act
+      # Act 
       output = longest_prefix(strings)
 
       # Assert
