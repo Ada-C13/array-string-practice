@@ -26,25 +26,20 @@ end
 # Time Complexity: ?
 # Space Complexity: ?
 def longest_prefix(strings)
-  first_string = strings[0]
+  shortest_string = strings.min_by(&:length)
 
-  string_length = first_string.length
-  x = string_length
+  string_length = shortest_string.length
+  x = string_length - 1
   
   strings.each do |string|
     string_length.times do
-      if !string.include?(first_string[0..x])
+      if !string.include?(shortest_string[0..x])
         x -= 1
       end
     end
-
-
-
   end
 
-  
-
-  return first_string[0..x]
+  return shortest_string[0..x]
 
 end
 
