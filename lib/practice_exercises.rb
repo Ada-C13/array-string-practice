@@ -13,10 +13,9 @@ def is_palindrome(string)
   return word_array.downcase == reversed_arrary.join.downcase 
 end
 
-# Time Complexity: ?
-# Space Complexity: ?
+# Time Complexity: O(n2) - because there is loop inside loop
+# Space Complexity: O(1) - because no matter how many words we will loop through, prefix stay the same number of words??
 
-strings = ['flow', 'flower', 'flake']
 
 def longest_prefix(strings)
   prefix = ""
