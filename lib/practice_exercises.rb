@@ -1,6 +1,6 @@
 
-# Time Complexity: is O(^mg)this_code_is_ridiculous an option? O(n)
-# Space Complexity: O(n^3)
+# Time Complexity: 
+# Space Complexity: 
 def is_palindrome(string)
   phrase = string.downcase
   split_array = phrase.split(//)
@@ -38,16 +38,23 @@ def is_palindrome(string)
 end
 
 
-# Time Complexity: ? O(n^2)
-# Space Complexity: ? O(n)
+# Time Complexity: ?
+# Space Complexity: ?
 def longest_prefix(strings)
   first_string = strings.sort_by!(&:length).first
+  # 1. "flow"
   i = 0 
+
   prefix = ""
+
+  # strings = ["flower", "flewrida", "flow"]
 
   first_string.length.times do |index|
     letter = first_string[index]
     strings.each do |string|
+      # 1. flow
+      # 2. flewrida
+      # 3. flower
       if string[index] != letter
         return prefix
       end
@@ -56,6 +63,20 @@ def longest_prefix(strings)
   end 
   
   return prefix
+  ## want to figure this out laterrrrr
+  # strings.each do |string|
+  #   string.length.times do 
+  #     if string[i] != first_string[i]
+  #       puts "#{string[i]}, #{first_string[i]}"
+  #       first_string = first_string[0..i]
+  #     else
+  #       i += 1
+  #     end
+  #   end 
 
+  #   # puts first_string
+  # end 
+    
 end
 
+# longest_prefix(strings)
