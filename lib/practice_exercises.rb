@@ -1,6 +1,5 @@
 
 # Time Complexity: O(n) => Because it depends on the input.
-
 # Space Complexity: O(1)
 def is_palindrome(string)
 
@@ -25,7 +24,7 @@ end
 
 # Reference: https://stackoverflow.com/questions/23896399/difference-between-omn-and-omn/23896477
 
-# Time Complexity: O(n^2) => Because it depends on the input size and it is a nested loop, but since 2 input sizes are different, it could be O(mn)?
+# Time Complexity: O(n*m) => It depends on the input size and it is a nested loop O(n^2), but since 2 input sizes are different, it is O(n*m)
 # Space Complexity: O(1)
 
 # Solution 1 (using time loop)
