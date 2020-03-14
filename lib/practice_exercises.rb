@@ -27,38 +27,39 @@ end
 
 
 
-# Time Complexity: ?
-# Space Complexity: ?
+# Time Complexity: O(n*m) (array length * string length) ??
+# Space Complexity: 0(1) If no additional arrays or variables. ??
 
-
-# Input: strings = ["flower","flow","flight"]
-# Output: "fl"
+# Big Oh Notation is still confusing. 
+# I struggled with this problem. I have a hard time keeping things simple. 
+# I saw a classmates solution and it was consise! 
 
 def longest_prefix(strings)
-  prefix = ""
-
-  array_index = 0
-  str_index = 0
-  longest_word = 0
-
-  
-  strings.each do |string|
-    if string.length > longest_word
-      longest_word = string.length
-    end
+  if strings.length == 1
+    return strings
   end
 
-  longest_word.times do  
-    condition_one = (strings[array_index][str_index] == strings[array_index + 1][str_index])
-   
-    condition_two = (strings[array_index][str_index] == strings[array_index + 2][str_index])
-   
-    if condition_one && condition_two
-    prefix << strings[array_index][str_index]
-    end
-    str_index += 1
+  prefix = ""
+  str_index = 0
 
+
+  until (strings[0][str_index] != strings[1][str_index]) || (strings[0][str_index] == nil && strings[1][str_index] == nil)
+    prefix += strings[0][str_index]
+    str_index += 1
+  end
+
+  strings.each do |string|
+  return "" if prefix[0] != string[0]
+
+    prefix.length.times do |i|
+      if prefix[i] != string[i]
+        prefix = prefix[0...i]
+        break
+      end
+    end
   end
   return prefix
 end
+
+
 
